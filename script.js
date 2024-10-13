@@ -1,13 +1,31 @@
 const mainForm = document.querySelector("#form");
-const weekButton = document.querySelector("#week-button")
-
-weekButton.onclick = addWeek();
+const weekBtn = document.querySelector("#week-btn")
+const monthOption = document.querySelector("#entry-dropdown");
+let weekNo = 0;
 
 function addWeek(){
-    const weekNo = 0
+    weekNo++;
     const HTMLString = `
     <fieldset>
         <legend>Week ${weekNo}</legend>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Number</th>
+                <th>Cost</th>
+            </tr>
+            <tr>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+            </tr>
+        </table>
     </fieldset>
     `;
+    mainForm.insertAdjacentHTML('beforeend', HTMLString);
 }
+
+weekBtn.addEventListener("click", addWeek);
+
+// create a table: for item, number, cost
+// within fieldset create button to add rows and to add total cost, w/out losing the input
