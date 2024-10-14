@@ -10,24 +10,27 @@
   <body>
     <main>
       <h1>Weekly Expenses Tracker</h1>
-      <form id="form">
-        <label for="entry-dropdown">Month:</label>
-        <select id="entry-dropdown" name="options">
-          <option value="" selected>------</option>
-          <option value="january">January</option>
-          <option value="february">February</option>
-          <option value="march">March</option>
-          <option value="april">April</option>
-          <option value="june">June</option>
-          <option value="july">July</option>
-          <option value="august">August</option>
-          <option value="september">September</option>
-          <option value="october">October</option>
-          <option value="november">November</option>
-          <option value="december">December</option>
-        </select>
-      </form>
-      <button id="week-btn" type="button">Add Week</button>
+      <div id="container">
+        <form id="form">
+          <label for="entry-dropdown">Month:</label>
+          <select id="entry-dropdown" name="options">
+            <option value="" selected>------</option>
+            <option value="january">January</option>
+            <option value="february">February</option>
+            <option value="march">March</option>
+            <option value="april">April</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="august">August</option>
+            <option value="september">September</option>
+            <option value="october">October</option>
+            <option value="november">November</option>
+            <option value="december">December</option>
+          </select>
+        </form>
+        <button id="week-btn" type="button">Add Week</button>
+      </div>
+      <div id="table-container"></div>
     </main>
   </body>
 </html>
