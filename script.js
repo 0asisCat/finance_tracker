@@ -2,9 +2,13 @@ const mainForm = document.querySelector("#form");
 const weekBtn = document.querySelector("#week-btn")
 const monthOption = document.querySelector("#entry-dropdown");
 let weekNo = 0;
+let isFour = false;
 
 function addWeek(){
     weekNo++;
+    if (weekNo >= 5){
+        weekBtn.style.display('none');
+    }
     const HTMLString = `
     <fieldset>
         <legend>Week ${weekNo}</legend>
