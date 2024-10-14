@@ -1,3 +1,12 @@
-:root{--main-color:black;--text-color:white;}
+:root{--main-color:black;--text-color:white;--box-color:gray;}
 *{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;box-sizing:border-box;margin:0;}
+.strong{font-size:2rem;}
 h1{color:var(--text-color);background-color:var(--main-color);padding:10px;}
+#container{background-color:var(--box-color);padding:5px;}
+
+/* Table */
+#table-container{padding:10px;}
+#table-box{width:80%;margin:10px auto;}
+table{width:100%;border-collapse: collapse;}
+table th, table td{border: 1px solid black;text-align: left;padding:8px;}
+table th{background-color:var(--main-color);color: var(--text-color);}
