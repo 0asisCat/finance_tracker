@@ -1,10 +1,10 @@
 const mainForm = document.querySelector("#form");
 const monthOption = document.querySelector("#entry-dropdown");
 const tableContainer = document.querySelector("#table-container");
-const tableLabels = document.querySelector("#table-labels");
+const tableLabels = document.querySelector("#tables");
 
 const weekBtn = document.querySelector("#week-btn")
-const columnBtn = document.querySelector("#add-column");
+const columnBtn = document.getElementById("add-column");
 let weekNo = 0;
 let isFour = false;
 
@@ -16,8 +16,8 @@ function addWeek(){
     const HTMLString = `
     <fieldset id="table-box">
         <legend class="strong">Week ${weekNo}</legend>
-        <table>
-            <tr id="table-labels">
+        <table id="tables">
+            <tr>
                 <th>Item</th>
                 <th>Number</th>
                 <th>Cost</th>
@@ -36,7 +36,7 @@ function addColumn(){
             <td><input type="text"></th>
             <td><input type="text"></th>
         </tr>
-    `
+    `;
     tableLabels.insertAdjacentHTML('beforeend', addColumnHTML);
 } // solve this shit
 
