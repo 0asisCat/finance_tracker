@@ -12,7 +12,7 @@ function addWeek(){
     weekNo++;
     if (weekNo >= 5){
         weekBtn.style.display('none');
-        weekBtn.style.background = 'gray';
+        weekBtn.style.background = 'gray'; // bro make this color change
     }
     const HTMLString = `
     <fieldset id="table-box">
@@ -33,9 +33,9 @@ function addWeek(){
 function addColumn(){ 
     const addColumnHTML = `
         <tr>
-            <td><input type="text"></th>
-            <td><input type="text"></th>
-            <td><input type="text"></th>
+            <td><input type="text" id="item"></th>
+            <td><input type="text" id="number"></th>
+            <td><input type="text" id="cost"></th>
         </tr>
     `;
     tableLabels.insertAdjacentHTML('beforeend', addColumnHTML);
