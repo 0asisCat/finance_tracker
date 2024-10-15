@@ -4,7 +4,7 @@ const tableContainer = document.querySelector("#table-container");
 const tableLabels = document.querySelector("#tables");
 
 const weekBtn = document.querySelector("#week-btn")
-const columnBtn = document.getElementById("add-column");
+const columnBtn = document.querySelector("#add-column");
 let weekNo = 0;
 let isFour = false;
 
@@ -12,6 +12,7 @@ function addWeek(){
     weekNo++;
     if (weekNo >= 5){
         weekBtn.style.display('none');
+        weekBtn.style.background = 'gray';
     }
     const HTMLString = `
     <fieldset id="table-box">
