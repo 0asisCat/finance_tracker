@@ -29,18 +29,16 @@ function addWeek(){
     tableContainer.insertAdjacentHTML('beforeend', HTMLString);
 }
 
-function addColumn(){
-    const HTMLString = `
-    <table>
+function addColumn(){ 
+    const addColumnHTML = `
         <tr>
             <td><input type="text"></th>
             <td><input type="text"></th>
             <td><input type="text"></th>
         </tr>
-    </table>
     `
-    tableLabels.insertAdjacentHTML('beforeend', HTMLString);
-}
+    tableLabels.insertAdjacentHTML('beforeend', addColumnHTML);
+} // solve this shit
 
 weekBtn.addEventListener("click", addWeek);
 columnBtn.addEventListener("click", addColumn);
