@@ -5,6 +5,7 @@ const tableLabels = document.querySelector("#tables");
 
 const weekBtn = document.querySelector("#week-btn")
 const columnBtn = document.querySelector("#add-column");
+
 let weekNo = 0;
 let isFour = false;
 
@@ -12,7 +13,7 @@ function addWeek(){
     weekNo++;
     if (weekNo >= 5){
         weekBtn.style.display('none');
-        weekBtn.style.background = 'gray'; // bro make this color change
+        weekBtn.style.background('gray'); // bro make this color change
     }
     const HTMLString = `
     <fieldset id="table-box">
@@ -24,7 +25,7 @@ function addWeek(){
                 <th>Cost</th>
             </tr>
         </table>
-        <button id="add-column" type="button">Add</button>
+        <button id="add-column" onclick="addColumn()">Add</button>
     </fieldset>
     `;
     tableContainer.insertAdjacentHTML('beforeend', HTMLString);
@@ -42,7 +43,7 @@ function addColumn(){
 } // solve this shit
 
 weekBtn.addEventListener("click", addWeek);
-columnBtn.addEventListener("click", addColumn);
 
-// create a table: for item, number, cost
+// create a table: for item, number, cost = DONE
+// button to add columns = fuking up
 // within fieldset create button to add rows and to add total cost, w/out losing the input
